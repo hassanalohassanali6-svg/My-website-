@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Charge - Professional Website Development</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #222222;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #1a1a1a;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #ffffff;
+            border: 2px solid #666;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .brand-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 5%;
+            background-color: #282828;
+            min-height: 80vh;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 30px;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #cccccc;
+            margin-bottom: 25px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            border: 1px solid #444;
+        }
+
+        /* Experience Badge */
+        .badge {
+            display: inline-block;
+            background-color: #333;
+            border: 1px solid #555;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 5%;
+            border-bottom: 1px solid #333;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .content-grid {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .grid-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .grid-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .grid-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Features List */
+        ul.features {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        ul.features li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            color: #dddddd;
+        }
+
+        ul.features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background-color: #1a1a1a;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #444;
+        }
+
+        .contact-box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .contact-box p {
+            font-size: 18px;
+            color: #cccccc;
+            margin-bottom: 25px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: #ffffff;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1da851;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111111;
+            color: #888888;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .hero, .content-grid {
+                flex-direction: column;
+            }
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo-container">
+            <div class="logo">WC</div>
+            <div class="brand-name">Web Charge</div>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Entry / Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <div class="badge">⚡ 2+ Years of Experience in Web Development</div>
+            <h1>Professional Website Development Services</h1>
+            <p>Welcome to <strong>Web Charge</strong>. With over 2 years of proven experience in web development, we build high-performance, modern, and visually compelling websites tailored to your business needs.</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Professional Computer Setup">
+        </div>
+    </section>
+
+    <!-- Home Detail / Coding Section -->
+    <section class="section">
+        <div class="content-grid">
+            <div class="grid-image">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Advanced Coding Work">
+            </div>
+            <div class="grid-text">
+                <h2>Custom Web Solutions for Every Business</h2>
+                <br>
+                <p>Hello! I am <strong>M. Hassan</strong> from <strong>Pakistan</strong>. Having actively developed websites for the past 2 years, I specialize in crafting custom websites for all types of businesses—no matter the industry or size.</p>
+                <br>
+                <p>Every website is built with precision, giving you full control over design customization, feature selection, and interactive Google Maps integration to showcase your location effectively.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">Why Choose Web Charge?</h2>
+        <div class="content-grid">
+            <div class="grid-text">
+                <p>At <strong>Web Charge</strong>, we combine 2 years of technical expertise to create digital experiences that attract and retain customers. A professionally designed website acts as your business's 24/7 storefront, building trust and converting visitors into loyal clients.</p>
+                
+                <ul class="features">
+                    <li>2+ Years of Hands-on Web Development Expertise</li>
+                    <li>100% Fully Customized Layouts & Designs</li>
+                    <li>Integrated Contact Numbers & Direct WhatsApp Messaging</li>
+                    <li>Embedded Dynamic Google Maps Locations</li>
+                    <li>Fast, Secure, and Mobile-Responsive Interfaces</li>
+                </ul>
+            </div>
+            <div class="grid-image">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Business Growth and Web Analytics">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="contact-box">
+            <h3>Get In Touch</h3>
+            <p>Ready to build your dream website? Let's discuss your project today.</p>
+            <p><strong>Developer:</strong> M. Hassan (Pakistan)</p>
+            <p><strong>Experience:</strong> 2+ Years in Web Development</p>
+            <p><strong>Phone / WhatsApp:</strong> 03256245182</p>
+            <br>
+            <a href="https://wa.me/923256245182" class="whatsapp-btn" target="_blank">Chat on WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Web Charge. Created by M. Hassan. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
